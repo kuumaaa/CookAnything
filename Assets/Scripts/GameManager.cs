@@ -36,5 +36,7 @@ public class GameManager : MonoBehaviour
         }
         
         input = new InputSystem_Actions();
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 }

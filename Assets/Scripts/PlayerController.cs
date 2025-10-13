@@ -5,8 +5,10 @@ public class PlayerController : MonoBehaviour
 {
     //components
     [SerializeField] private GameObject head;
+    [SerializeField] private GameObject hand;
 
     [SerializeField] private Rigidbody rigidbody;
+    [SerializeField] private GameObject cameraObject;
 
     //jumping
     public float jumpForce = 5f;
@@ -27,6 +29,9 @@ public class PlayerController : MonoBehaviour
     private float _speed = 5.0f;
     private InputSystem_Actions input = null;
     private Vector2 inputVector = Vector2.zero;
+    
+    
+    private float pickupRange = 3f;      
 
     private void Awake()
     {
@@ -42,7 +47,10 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Movement();
+        DetectObject();
+        
     }
+    
 
     private void OnEnable()
     {
@@ -78,27 +86,6 @@ public class PlayerController : MonoBehaviour
     {
         Physics.gravity = -transform.up * _gravityConst;
     }
-    
-
-    public Vector3 GetForwardVector()
-    {
-        return _cameraRotation.GetRotatedForwardVector();
-    }
-
-    public Vector3 GetRightVector()
-    {
-        return _cameraRotation.GetRotatedRightVector();
-    }
-
-    public Vector3 GetUpVector()
-    {
-        return transform.up;
-    }
-
-    public Vector3 GetPosition()
-    {
-        return transform.position;
-    }
 
     private void OnMovementPerformed(InputAction.CallbackContext value)
     {
@@ -119,9 +106,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void SetStartTransform(Transform transform)
+    private void DetectObject()
     {
-        this.transform.position = transform.position;
-        this.transform.rotation = transform.rotation;
+        Ray ray = cameraObject.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
+        {
+            if (hit.rigidbody != null && hit.collider.CompareTag("Object"))
+            {
+                Debug.Log("hit an object!");
+                /*
+                heldObject = hit.rigidbody;
+                heldObject.useGravity = false;
+                heldObject.drag = 10;
+                heldObject.transform.parent = holdPosition;
+                */
+            }
+        }
     }
+    
 }
