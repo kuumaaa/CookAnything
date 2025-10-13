@@ -17,9 +17,7 @@ public class PlayerController : MonoBehaviour
     private float _gravityConst = 9.81f;
     private float _groundRayLength = 0.6f;
     private Vector3 _moveDirection = Vector3.zero;
-
-    private bool _once = true;
-
+    
     //movement vectors
     private Vector3 _rotatedForward = Vector3.forward;
     private Vector3 _rotatedRight = Vector3.right;
@@ -137,7 +135,7 @@ public class PlayerController : MonoBehaviour
         
         objectInHand.AddComponent<Rigidbody>();
         objectInHand.GetComponent<Rigidbody>().useGravity = true;
-        objectInHand.GetComponent<Rigidbody>().linearDamping = 1;
+        objectInHand.GetComponent<Rigidbody>().linearDamping = 0.1f;
         objectInHand.GetComponent<Rigidbody>().AddForce(cameraObject.transform.forward * 10f, ForceMode.Impulse);
         
         objectInHand = null;

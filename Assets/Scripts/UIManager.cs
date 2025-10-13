@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject objectInfoUI;
     [SerializeField] private TMP_Text objectNameText;
     [SerializeField] private TMP_Text objectDescriptionText;
+    [SerializeField] private TMP_Text scoreBoardText;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,5 +32,10 @@ public class UIManager : MonoBehaviour
     {
         objectInfoUI.SetActive(true);
         objectNameText.text = "Press E to pick up " + info;
+    }
+
+    public void UpdateScore(int score)
+    {
+        scoreBoardText.text = "Score: " + score.ToString();
     }
 }

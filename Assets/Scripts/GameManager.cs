@@ -1,9 +1,12 @@
+using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     private InputSystem_Actions input = null;
+    private int score = 0;
 
     [SerializeField] private GameObject uIManager;
     
@@ -45,5 +48,20 @@ public class GameManager : MonoBehaviour
     public UIManager GetUIManager()
     {
         return uIManager.GetComponent<UIManager>();
+    }
+
+    public void UpdateScore(int scoreDelta)
+    {
+        score += scoreDelta;
+        uIManager.GetComponent<UIManager>().UpdateScore(score);
+
+        if (score < -100)
+        {
+            Debug.Log("Game Over");
+        }
+    }
+
+    public void RestartGame() {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
