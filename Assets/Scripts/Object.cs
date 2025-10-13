@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Object : MonoBehaviour
 {
+    [SerializeField] private string name = "hello world";
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,4 +14,11 @@ public class Object : MonoBehaviour
     {
         
     }
+
+    public string GetName()
+    {
+        return name;
+    }
+    
+    
 }

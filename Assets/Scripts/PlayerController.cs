@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -31,7 +32,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 inputVector = Vector2.zero;
     
     
-    private float pickupRange = 3f;      
+    private float pickupRange = 1f;
+    private bool isObjectInHand = false;
+    private GameObject objectInHand = null;
 
     private void Awake()
     {
@@ -48,7 +51,6 @@ public class PlayerController : MonoBehaviour
     {
         Movement();
         DetectObject();
-        
     }
     
 
@@ -59,6 +61,9 @@ public class PlayerController : MonoBehaviour
         input.Player.Move.canceled += OnMovementCancelled;
 
         input.Player.Jump.performed += OnJumpPerformed;
+        
+        input.Player.Throw.performed += OnThrowPerformed;
+        input.Player.Interact.performed += OnInteractPerformed;
     }
 
     private void OnDisable()
@@ -68,6 +73,9 @@ public class PlayerController : MonoBehaviour
         input.Player.Move.canceled -= OnMovementCancelled;
 
         input.Player.Jump.performed -= OnJumpPerformed;
+
+        input.Player.Throw.performed -= OnThrowPerformed;
+        input.Player.Interact.performed -= OnInteractPerformed;
     }
 
     private void Movement()
@@ -111,15 +119,42 @@ public class PlayerController : MonoBehaviour
         Ray ray = cameraObject.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
         {
-            if (hit.rigidbody != null && hit.collider.CompareTag("Object"))
+            if (hit.collider.CompareTag("Object"))
             {
-                Debug.Log("hit an object!");
-                /*
-                heldObject = hit.rigidbody;
-                heldObject.useGravity = false;
-                heldObject.drag = 10;
-                heldObject.transform.parent = holdPosition;
-                */
+                GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<Object>().GetName());
+            }
+        }
+        else
+        {
+            GameManager.Instance.GetUIManager().DisableObjectInfo();
+        }
+    }
+
+    private void OnThrowPerformed(InputAction.CallbackContext value)
+    {
+        isObjectInHand = false;
+        objectInHand.transform.SetParent(null);
+        
+        objectInHand.AddComponent<Rigidbody>();
+        objectInHand.GetComponent<Rigidbody>().useGravity = true;
+        objectInHand.GetComponent<Rigidbody>().linearDamping = 1;
+        objectInHand.GetComponent<Rigidbody>().AddForce(cameraObject.transform.forward * 10f, ForceMode.Impulse);
+        
+        objectInHand = null;
+    }
+
+    private void OnInteractPerformed(InputAction.CallbackContext value)
+    {
+        Ray ray = cameraObject.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+        if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
+        {
+            if (hit.collider.CompareTag("Object") && !isObjectInHand)
+            {
+                objectInHand = hit.collider.gameObject;
+                objectInHand.transform.SetParent(hand.transform);
+                objectInHand.transform.localPosition = Vector3.zero;
+                Destroy(objectInHand.GetComponent<Rigidbody>());
+                isObjectInHand = true;
             }
         }
     }

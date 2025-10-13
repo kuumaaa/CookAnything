@@ -4,6 +4,8 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
     private InputSystem_Actions input = null;
+
+    [SerializeField] private GameObject uIManager;
     
     public static GameManager Instance
     {
@@ -38,5 +40,10 @@ public class GameManager : MonoBehaviour
         input = new InputSystem_Actions();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public UIManager GetUIManager()
+    {
+        return uIManager.GetComponent<UIManager>();
     }
 }
