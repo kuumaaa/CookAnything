@@ -22,7 +22,7 @@ public class Tablet : MonoBehaviour
         this.startPos = startPos;
         this.endPos = endPos;
         this.duration = duration;
-        Debug.Log("name: " + data.mealName);
+        
         name.text = data.mealName;
         starsOne.InitializeStars(data.Geschmack, "Mild","Funky",false);
         starsTwo.InitializeStars(data.Konsistenz, "Weich","Hart",false);
@@ -59,4 +59,12 @@ public class Tablet : MonoBehaviour
         GameManager.Instance.UpdateScore(100);
         Destroy(gameObject);
     }
+
+    public void AddObject(ObjectData data)
+    {
+        starsOne.AddObject(data.Geschmack);
+        starsTwo.AddObject(data.Konsistenz);
+        starsThree.AddObject(data.Temperatur);
+    }
+    
 }

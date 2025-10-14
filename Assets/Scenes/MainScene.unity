@@ -4755,7 +4755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8253931484733568147, guid: ad6eb7e324100ee4c827479ff43e31a2, type: 3}
       propertyPath: m_Name
-      value: teller
+      value: Tablet
       objectReference: {fileID: 0}
     - target: {fileID: 8551033062610962703, guid: ad6eb7e324100ee4c827479ff43e31a2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9054,7 +9054,7 @@ MonoBehaviour:
   hand: {fileID: 804193365}
   rigidbody: {fileID: 1278701365}
   cameraObject: {fileID: 330585543}
-  jumpForce: 1
+  jumpForce: 3
 --- !u!143 &1278701360
 CharacterController:
   m_ObjectHideFlags: 0

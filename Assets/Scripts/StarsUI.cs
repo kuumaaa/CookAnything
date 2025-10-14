@@ -54,7 +54,6 @@ public class StarsUI : MonoBehaviour
         rightAxisText.text = rightAxis;
         expectedValue = value;
         
-        
         IterateStars(starValue.zero,value,color);
     }
     
@@ -95,6 +94,39 @@ public class StarsUI : MonoBehaviour
                 starPositiveThree.color = color;
                 break;
         }
+    }
+
+    public void AddObject(starValue valueStar)
+    {
+        actualValue = (starValue)Mathf.Clamp((int)actualValue  + (int)valueStar, -3, 3);
+        
+        foreach (starValue value in Enum.GetValues(typeof(starValue)))
+        {
+            UpdateStars(value,emptyStarColor);
+        }
+        
+        IterateStars(starValue.zero,expectedValue,goalStarColor);
+        
+        //Todo fix this:
+        
+        if (Math.Sign((int)expectedValue) != Math.Sign((int)actualValue))
+        {
+            IterateStars(starValue.zero,actualValue,incorrectStarColor);
+        }
+        else
+        {
+            if ((int)expectedValue < (int)actualValue)
+            {
+                IterateStars(starValue.zero,expectedValue,correctStarColor);
+                IterateStars(expectedValue+Math.Sign((int)actualValue),actualValue,incorrectStarColor);
+            }
+            else
+            {
+                IterateStars(starValue.zero,actualValue,correctStarColor);
+            }
+            
+        }
+        
     }
     
 

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InteractableObject : MonoBehaviour
+public class Object : MonoBehaviour
 {
     [SerializeField] private string name;
     [SerializeField] private starValue Geschmack;

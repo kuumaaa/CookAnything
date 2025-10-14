@@ -23,7 +23,6 @@ public class TabletSpawner : MonoBehaviour
     void Start()
     {
         tablets = Resources.LoadAll<TabletData>("Tablets");
-        Debug.Log(tablets[1].mealName);
         StartCoroutine(Spawner());
         SpawnTablet();
     }
@@ -55,7 +54,6 @@ public class TabletSpawner : MonoBehaviour
 
     private void SpawnTablet()
     {
-        Debug.Log(tablets[0].mealName);
         GameObject newTablet = Instantiate(tabletPrefab, spawn.transform);
         newTablet.GetComponent<Tablet>().Spawn(spawn.transform.position, end.transform.position,tabletLivingTime, tablets[0]);
     }

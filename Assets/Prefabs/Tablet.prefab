@@ -2670,6 +2670,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tablet
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1e177781d6ad6724197b51d6ea0b9eb2, type: 3}
+      propertyPath: m_TagString
+      value: Tablet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2680,6 +2684,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e177781d6ad6724197b51d6ea0b9eb2, type: 3}
       insertIndex: -1
       addedObject: {fileID: -363016353373430793}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e177781d6ad6724197b51d6ea0b9eb2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 560115537948154287}
   m_SourcePrefab: {fileID: 100100000, guid: 1e177781d6ad6724197b51d6ea0b9eb2, type: 3}
 --- !u!1 &8253931484733568147 stripped
 GameObject:
@@ -2702,6 +2709,27 @@ MonoBehaviour:
   starsOne: {fileID: 8365748755874126144}
   starsTwo: {fileID: 8112114515962572550}
   starsThree: {fileID: 335001285462330700}
+--- !u!135 &560115537948154287
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8253931484733568147}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.012
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &8773023450836282921 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1e177781d6ad6724197b51d6ea0b9eb2, type: 3}

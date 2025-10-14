@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.collider.CompareTag("Object"))
             {
-                GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<InteractableObject>().GetObjectData());
+                GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<Object>().GetObjectData());
             }
         }
         else
@@ -151,6 +151,7 @@ public class PlayerController : MonoBehaviour
     private void OnInteractPerformed(InputAction.CallbackContext value)
     {
         Ray ray = cameraObject.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+       
         if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
         {
             if (hit.collider.CompareTag("Object") && !isObjectInHand)
@@ -161,8 +162,13 @@ public class PlayerController : MonoBehaviour
                 Destroy(objectInHand.GetComponent<Rigidbody>());
                 objectInHand.GetComponent<Collider>().enabled = false;
                 isObjectInHand = true;
+            } else if (hit.collider.CompareTag("Tablet") && isObjectInHand)
+            {
+                hit.collider.gameObject.GetComponent<Tablet>().AddObject(objectInHand.GetComponent<Object>().GetObjectData());
+                Destroy(objectInHand);
+                isObjectInHand = false;
             }
-        }
+        } 
     }
     
 }
