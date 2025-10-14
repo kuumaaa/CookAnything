@@ -55,7 +55,7 @@ public class TabletSpawner : MonoBehaviour
     private void SpawnTablet()
     {
         GameObject newTablet = Instantiate(tabletPrefab, spawn.transform);
-        newTablet.GetComponent<Tablet>().Spawn(spawn.transform.position, end.transform.position,tabletLivingTime, tablets[0]);
+        newTablet.GetComponent<Tablet>().Spawn(spawn.transform.position, end.transform.position,tabletLivingTime, tablets[Random.Range(0, tablets.Length)]);
     }
     
     

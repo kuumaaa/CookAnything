@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 267896737ac91fe4aa500f62d6ac450f, type: 3}
-  m_Name: Pizza Gyros
+  m_Name: Spaghetti
   m_EditorClassIdentifier: Assembly-CSharp::TabletData
-  mealName: "Pizza Gyros mit frischem Grillgem\xFCse und K\xE4sealternativen"
-  Geschmack: -3
+  mealName: Feuriges Spaghetti Tomaten-Mango-Belugalinsenragout mit Zitronendip
+  Geschmack: 3
   Konsistenz: 3
   Temperatur: 3

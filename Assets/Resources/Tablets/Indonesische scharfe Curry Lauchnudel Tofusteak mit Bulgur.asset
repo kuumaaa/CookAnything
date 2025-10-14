@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Indonesische scharfe Curry Lauchnudel Tofusteak mit Bulgur
   m_EditorClassIdentifier: Assembly-CSharp::TabletData
   mealName: Indonesische scharfe Curry Lauchnudel Tofusteak mit Bulgur
-  Geschmack: -3
-  Konsistenz: -3
-  Temperatur: 1
+  Geschmack: 3
+  Konsistenz: -2
+  Temperatur: 2

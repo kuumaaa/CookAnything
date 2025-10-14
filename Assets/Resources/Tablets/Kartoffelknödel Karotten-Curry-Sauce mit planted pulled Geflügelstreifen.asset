@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TabletData
   mealName: "Kartoffelkn\xF6del Karotten-Curry-Sauce mit planted pulled Gefl\xFCgelstreifen"
   Geschmack: -2
-  Konsistenz: 1
+  Konsistenz: 2
   Temperatur: 3
