@@ -8234,7 +8234,7 @@ MonoBehaviour:
   hand: {fileID: 804193365}
   rigidbody: {fileID: 1278701365}
   cameraObject: {fileID: 330585543}
-  jumpForce: 5
+  jumpForce: 1
 --- !u!143 &1278701360
 CharacterController:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Object : MonoBehaviour
+public class InteractableObject : MonoBehaviour
 {
     [SerializeField] private string name;
     [SerializeField] private starValue Geschmack;
@@ -26,5 +26,16 @@ public class Object : MonoBehaviour
         return data;
     } 
     
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        // If hit by a thrown object, enable physics
+        if (collision.gameObject.GetComponent<Thrown>() != null)
+        {
+            if (GetComponent<Rigidbody>() == null)
+            {
+                Rigidbody rb = gameObject.AddComponent<Rigidbody>();
+                rb.useGravity = true;
+            }
+        }
+    }
 }

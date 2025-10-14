@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject cameraObject;
 
     //jumping
-    public float jumpForce = 5f;
+    public float jumpForce = 2.5f;
     private HeadRotation _cameraRotation;
     private float _gravityConst = 9.81f;
     private float _groundRayLength = 0.6f;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private float _rotationDuration = 0.15f;
 
     //constants
-    private float _speed = 5.0f;
+    private float _speed = 2.5f;
     private InputSystem_Actions input = null;
     private Vector2 inputVector = Vector2.zero;
     
@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.collider.CompareTag("Object"))
             {
-                GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<Object>().GetObjectData());
+                GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<InteractableObject>().GetObjectData());
             }
         }
         else
@@ -137,7 +137,14 @@ public class PlayerController : MonoBehaviour
         objectInHand.GetComponent<Rigidbody>().useGravity = true;
         objectInHand.GetComponent<Rigidbody>().linearDamping = 0.1f;
         objectInHand.GetComponent<Rigidbody>().AddForce(cameraObject.transform.forward * 10f, ForceMode.Impulse);
-        
+
+        Collider col = objectInHand.GetComponent<Collider>();
+        if (col == null) col = objectInHand.AddComponent<BoxCollider>();
+        else col.enabled = true;
+
+        if (objectInHand.GetComponent<Thrown>() == null)
+            objectInHand.AddComponent<Thrown>();
+
         objectInHand = null;
     }
 
@@ -152,6 +159,7 @@ public class PlayerController : MonoBehaviour
                 objectInHand.transform.SetParent(hand.transform);
                 objectInHand.transform.localPosition = Vector3.zero;
                 Destroy(objectInHand.GetComponent<Rigidbody>());
+                objectInHand.GetComponent<Collider>().enabled = false;
                 isObjectInHand = true;
             }
         }
