@@ -28,6 +28,11 @@ public class StarsUI : MonoBehaviour
 
     private void Awake()
     {
+        ResetStars();
+    }
+
+    private void ResetStars()
+    {
         foreach (starValue value in Enum.GetValues(typeof(starValue)))
         {
             UpdateStars(value,emptyStarColor);
@@ -35,14 +40,22 @@ public class StarsUI : MonoBehaviour
     }
 
 
-    public void InitializeStars(starValue value, string leftAxis, string rightAxis)
+    public void InitializeStars(starValue value, string leftAxis, string rightAxis, bool isObjectStars)
     {
+        ResetStars();
+        
+        Color color = goalStarColor;
+        if (isObjectStars)
+        {
+            color = correctStarColor;
+        }
+        
         leftAxisText.text = leftAxis;
         rightAxisText.text = rightAxis;
         expectedValue = value;
         
         
-        IterateStars(starValue.zero,value,goalStarColor);
+        IterateStars(starValue.zero,value,color);
     }
     
     private void IterateStars(starValue start, starValue end, Color color)
