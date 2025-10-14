@@ -24,9 +24,9 @@ public class Tablet : MonoBehaviour
         this.duration = duration;
         Debug.Log("name: " + data.mealName);
         name.text = data.mealName;
-        starsOne.InitializeStars(data.Geschmack, "Mild","Funky");
-        starsTwo.InitializeStars(data.Konsistenz, "Weich","Hart");
-        starsThree.InitializeStars(data.Temperatur, "Kalt","Heiß");
+        starsOne.InitializeStars(data.Geschmack, "Mild","Funky",false);
+        starsTwo.InitializeStars(data.Konsistenz, "Weich","Hart",false);
+        starsThree.InitializeStars(data.Temperatur, "Kalt","Heiß",false);
         
         
         StartCoroutine(MoveObject());

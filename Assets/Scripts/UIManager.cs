@@ -6,7 +6,9 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject objectInfoUI;
     [SerializeField] private TMP_Text objectNameText;
-    [SerializeField] private TMP_Text objectDescriptionText;
+    [SerializeField] private StarsUI starsUIOne;
+    [SerializeField] private StarsUI starsUITwo;
+    [SerializeField] private StarsUI starsUIThree;
     [SerializeField] private TMP_Text scoreBoardText;
     [SerializeField] private GameObject gameOverScreen;
     
@@ -20,7 +22,10 @@ public class UIManager : MonoBehaviour
     {
         objectInfoUI.SetActive(true);
         objectNameText.text = "Press E to pick up " + data.objectName;
-        //todo add the other properties
+        starsUIOne.InitializeStars(data.Geschmack,"Mild","Funky",true);
+        starsUITwo.InitializeStars(data.Konsistenz,"Weich","Hart",true);
+        starsUIThree.InitializeStars(data.Temperatur,"Kalt","Heiß",true);
+        
     }
 
     public void UpdateScore(int score)
