@@ -2,6 +2,17 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+public enum starValue
+{
+    negativeThree = -3,
+    negativeTwo = -2,
+    negativeOne = -1,
+    zero = 0,
+    positiveOne = 1,
+    positiveTwo = 2,
+    positiveThree = 3,
+}
 public class GameManager : MonoBehaviour
 {
     private static GameManager _instance;
@@ -9,6 +20,8 @@ public class GameManager : MonoBehaviour
     private int score = 0;
 
     [SerializeField] private GameObject uIManager;
+
+
     
     public static GameManager Instance
     {

@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: Pizza Gyros
   m_EditorClassIdentifier: Assembly-CSharp::TabletData
   mealName: Pizza Gyros
-  eigenschaft1: 2
-  eigenschaft2: 3
-  eigenschaft3: -1
-  eigenschaft4: 2
+  Geschmack: -2
+  Konsistenz: 2
+  Temperatur: 2

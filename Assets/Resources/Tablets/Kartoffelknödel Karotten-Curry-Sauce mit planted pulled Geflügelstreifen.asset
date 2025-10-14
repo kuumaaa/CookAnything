@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: "Kartoffelkn\xF6del Karotten-Curry-Sauce mit planted pulled Gefl\xFCgelstreifen"
   m_EditorClassIdentifier: Assembly-CSharp::TabletData
   mealName: "Kartoffelkn\xF6del Karotten-Curry-Sauce mit planted pulled Gefl\xFCgelstreifen"
-  eigenschaft1: 3
-  eigenschaft2: -3
-  eigenschaft3: 2
-  eigenschaft4: 1
+  Geschmack: -2
+  Konsistenz: 1
+  Temperatur: 3

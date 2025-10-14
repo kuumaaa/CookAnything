@@ -3,22 +3,10 @@ using UnityEngine;
 public class Object : MonoBehaviour
 {
     [SerializeField] private string name;
-    [SerializeField] private int eigenschaft1;
-    [SerializeField] private int eigenschaft2;
-    [SerializeField] private int eigenschaft3;
-    [SerializeField] private int eigenschaft4;
+    [SerializeField] private starValue Geschmack;
+    [SerializeField] private starValue Konsistenz;
+    [SerializeField] private starValue Temperatur;
     [SerializeField] private string beschreibung;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public string GetName()
     {
@@ -30,10 +18,9 @@ public class Object : MonoBehaviour
         ObjectData data = ScriptableObject.CreateInstance<ObjectData>();
         
         data.objectName = name;
-        data.eigenschaft1 = eigenschaft1;
-        data.eigenschaft2 = eigenschaft2;
-        data.eigenschaft3 = eigenschaft3;
-        data.eigenschaft4 = eigenschaft4;
+        data.Geschmack = Geschmack;
+        data.Konsistenz = Konsistenz;
+        data.Temperatur = Temperatur;
         data.beschreibung = beschreibung;
         
         return data;
