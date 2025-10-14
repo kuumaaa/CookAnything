@@ -42,6 +42,6 @@ public class UIManager : MonoBehaviour
 
     public void ActivateGameOverScreen()
     {
-        
+        gameOverScreen.SetActive(true);
     }
 }

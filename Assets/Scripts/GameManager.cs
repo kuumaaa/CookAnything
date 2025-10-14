@@ -58,7 +58,6 @@ public class GameManager : MonoBehaviour
         if (score < -100)
         {
             GameOver();
-
         }
     }
 
