@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text objectNameText;
     [SerializeField] private TMP_Text objectDescriptionText;
     [SerializeField] private TMP_Text scoreBoardText;
+    [SerializeField] private GameObject gameOverScreen;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -37,5 +38,10 @@ public class UIManager : MonoBehaviour
     public void UpdateScore(int score)
     {
         scoreBoardText.text = "Score: " + score.ToString();
+    }
+
+    public void ActivateGameOverScreen()
+    {
+        
     }
 }

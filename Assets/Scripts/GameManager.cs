@@ -57,11 +57,20 @@ public class GameManager : MonoBehaviour
 
         if (score < -100)
         {
-            Debug.Log("Game Over");
+            GameOver();
+
         }
     }
 
     public void RestartGame() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    private void GameOver()
+    {
+        Debug.Log("Game Over");
+        Cursor.lockState = CursorLockMode.Confined;
+        Cursor.visible = true;
+        uIManager.GetComponent<UIManager>().ActivateGameOverScreen();
     }
 }
