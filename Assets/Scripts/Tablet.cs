@@ -7,6 +7,9 @@ public class Tablet : MonoBehaviour
     private Vector3 endPos = Vector3.zero;
     private float duration = 0f;
     
+    
+    
+    
 
     public void Spawn(Vector3 startPos, Vector3 endPos, float duration)
     {

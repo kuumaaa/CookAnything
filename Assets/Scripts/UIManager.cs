@@ -10,29 +10,17 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text scoreBoardText;
     [SerializeField] private GameObject gameOverScreen;
     
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-
 
     public void DisableObjectInfo()
     {
         objectInfoUI.SetActive(false);
     }
 
-    public void UpdateObjectInfo(string info)
+    public void UpdateObjectInfo(ObjectData data)
     {
         objectInfoUI.SetActive(true);
-        objectNameText.text = "Press E to pick up " + info;
+        objectNameText.text = "Press E to pick up " + data.objectName;
+        //todo add the other properties
     }
 
     public void UpdateScore(int score)

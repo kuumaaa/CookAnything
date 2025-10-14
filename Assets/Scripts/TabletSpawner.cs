@@ -6,10 +6,11 @@ using Random = UnityEngine.Random;
 
 public class TabletSpawner : MonoBehaviour
 {
+    private TabletData[] tablets;
     [SerializeField] private GameObject tabletPrefab;
     [SerializeField] private GameObject spawn;
     [SerializeField] private GameObject end;
-
+    
 
     private float tabletLivingTime = 60f;
     private float timeBetweenSpawns = 15f;
@@ -21,6 +22,8 @@ public class TabletSpawner : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        tablets = Resources.LoadAll<TabletData>("Tablets");
+        Debug.Log(tablets[1].mealName);
         StartCoroutine(Spawner());
         SpawnTablet();
     }

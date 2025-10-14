@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.collider.CompareTag("Object"))
             {
-                GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<Object>().GetName());
+                GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<Object>().GetObjectData());
             }
         }
         else
