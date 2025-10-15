@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject cameraObject;
 
     //jumping
-    public float jumpForce = 2.5f;
+    private float jumpForce = 5f;
     private HeadRotation _cameraRotation;
     private float _gravityConst = 9.81f;
     private float _groundRayLength = 0.6f;
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
     private float _rotationDuration = 0.15f;
 
     //constants
-    private float _speed = 2.5f;
+    private float _speed = 3.5f;
     private InputSystem_Actions input = null;
     private Vector2 inputVector = Vector2.zero;
     
