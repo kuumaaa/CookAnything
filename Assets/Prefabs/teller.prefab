@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: teller
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1e177781d6ad6724197b51d6ea0b9eb2, type: 3}
+      propertyPath: m_TagString
+      value: Object
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

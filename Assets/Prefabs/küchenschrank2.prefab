@@ -52,6 +52,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: "k\xFCchenschrank2"
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d993ab6410404654ea216f786584bee3, type: 3}
+      propertyPath: m_TagString
+      value: Object
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
