@@ -117,18 +117,28 @@ public class PlayerController : MonoBehaviour
         Ray ray = cameraObject.GetComponent<Camera>().ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
         if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
         {
-            if (hit.collider.CompareTag("Object"))
+            if (!isObjectInHand && hit.collider.CompareTag("Object"))
             {
                 GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<Object>().GetObjectData());
             } else if (hit.collider.CompareTag("Tablet"))
             {
                 GameManager.Instance.GetUIManager().SetTabletUIActive(true);
+            } else if (isObjectInHand && hit.collider.CompareTag("Object") &&
+                       hit.collider.gameObject.TryGetComponent<CookingPot>(out CookingPot cookingPot))
+            {
+                GameManager.Instance.GetUIManager().SetCookingUIActive(true);
+            } else if (isObjectInHand && hit.collider.CompareTag("Object") &&
+                       hit.collider.gameObject.TryGetComponent<Freezer>(out Freezer freezer))
+            {
+                GameManager.Instance.GetUIManager().SetFreezingUIActive(true);
             }
         }
         else
         {
             GameManager.Instance.GetUIManager().DisableObjectInfo();
             GameManager.Instance.GetUIManager().SetTabletUIActive(false);
+            GameManager.Instance.GetUIManager().SetCookingUIActive(false);
+            GameManager.Instance.GetUIManager().SetFreezingUIActive(false);
         }
     }
 
@@ -158,7 +168,7 @@ public class PlayerController : MonoBehaviour
        
         if (Physics.Raycast(ray, out RaycastHit hit, pickupRange))
         {
-            if (hit.collider.CompareTag("Object") && !isObjectInHand)
+            if (!isObjectInHand && hit.collider.CompareTag("Object"))
             {
                 objectInHand = hit.collider.gameObject;
                 objectInHand.transform.SetParent(hand.transform);
@@ -171,6 +181,30 @@ public class PlayerController : MonoBehaviour
                 hit.collider.gameObject.GetComponent<Tablet>().AddObject(objectInHand.GetComponent<Object>().GetObjectData());
                 Destroy(objectInHand);
                 isObjectInHand = false;
+            } else if (isObjectInHand && hit.collider.CompareTag("Object") &&
+                       hit.collider.gameObject.TryGetComponent<CookingPot>(out CookingPot cookingPot))
+            {
+                if (!cookingPot.IsPotCooking())
+                {
+                    isObjectInHand = false;
+                    objectInHand.transform.SetParent(null);
+                    
+                    cookingPot.StartCooking(objectInHand);
+
+                    objectInHand = null;
+                }
+            } else if (isObjectInHand && hit.collider.CompareTag("Object") &&
+                       hit.collider.gameObject.TryGetComponent<Freezer>(out Freezer freezer))
+            {
+                if (!freezer.IsFreezing())
+                {
+                    isObjectInHand = false;
+                    objectInHand.transform.SetParent(null);
+                    
+                    freezer.StartFreezing(objectInHand);
+
+                    objectInHand = null;
+                }
             }
         } 
     }

@@ -15,7 +15,7 @@ public class TabletSpawner : MonoBehaviour
     private float tabletLivingTime = 120f;
     private float timeBetweenSpawns = 30f;
     
-    private float minTabletLivingTime = 400f;
+    private float minTabletLivingTime = 40f;
     private float minTimeBetweenSpawns = 15f;
     
     

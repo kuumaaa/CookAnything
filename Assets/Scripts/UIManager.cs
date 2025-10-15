@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverScreen;
     
     [SerializeField] private GameObject tabletInfoUI;
+    [SerializeField] private GameObject cookingInfoUI;
+    [SerializeField] private GameObject freezingInfoUI;
     
 
     public void DisableObjectInfo()
@@ -43,5 +45,15 @@ public class UIManager : MonoBehaviour
     public void SetTabletUIActive(bool active)
     {
         tabletInfoUI.SetActive(active);
+    }
+
+    public void SetCookingUIActive(bool active)
+    {
+        cookingInfoUI.SetActive(active);
+    }
+
+    public void SetFreezingUIActive(bool active)
+    {
+        freezingInfoUI.SetActive(active);
     }
 }

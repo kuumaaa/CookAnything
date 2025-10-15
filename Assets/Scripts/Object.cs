@@ -1,3 +1,5 @@
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Object : MonoBehaviour
@@ -37,5 +39,15 @@ public class Object : MonoBehaviour
                 rb.useGravity = true;
             }
         }
+    }
+
+    public void Cook()
+    {
+        Temperatur = (starValue)Math.Clamp((int)Temperatur + 1, -3, 3);
+    }
+
+    public void Freeze()
+    {
+        Temperatur = (starValue)Math.Clamp((int)Temperatur - 1, -3, 3);
     }
 }
