@@ -13,6 +13,8 @@ public class Tablet : MonoBehaviour
     [SerializeField] private StarsUI starsTwo;
     [SerializeField] private StarsUI starsThree;
     [SerializeField] private TMP_Text scoreUI;
+
+    [SerializeField] private GameObject essen;
     
     
     
@@ -66,6 +68,7 @@ public class Tablet : MonoBehaviour
         starsThree.AddObject(data.Temperatur);
         
         scoreUI.text = "Score: " + CalculateScore();
+        essen.SetActive(true);
     }
 
     private int CalculateScore()
