@@ -124,10 +124,23 @@ public class StarsUI : MonoBehaviour
             {
                 IterateStars(starValue.zero,actualValue,correctStarColor);
             }
-            
+        }
+    }
+
+    public int CalculateScore()
+    {
+        int score = 0;
+
+        if (Math.Sign((int)expectedValue) == Math.Sign((int)actualValue))
+        {
+            score += 2 * Math.Min((int)expectedValue, (int)actualValue) - Math.Abs((int)expectedValue - (int)actualValue);
+        }
+        else
+        {
+            score -= Math.Abs((int)expectedValue - (int)actualValue);
         }
         
+        return score;
     }
     
-
 }

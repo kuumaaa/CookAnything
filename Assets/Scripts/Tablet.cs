@@ -12,6 +12,7 @@ public class Tablet : MonoBehaviour
     [SerializeField] private StarsUI starsOne;
     [SerializeField] private StarsUI starsTwo;
     [SerializeField] private StarsUI starsThree;
+    [SerializeField] private TMP_Text scoreUI;
     
     
     
@@ -28,6 +29,7 @@ public class Tablet : MonoBehaviour
         starsTwo.InitializeStars(data.Konsistenz, "Weich","Hart",false);
         starsThree.InitializeStars(data.Temperatur, "Kalt","Heiß",false);
         
+        scoreUI.text = "Score: " + CalculateScore();
         
         StartCoroutine(MoveObject());
     }
@@ -53,10 +55,7 @@ public class Tablet : MonoBehaviour
 
     private void MealFinished()
     {
-        //todo calculate score
-        
-        
-        GameManager.Instance.UpdateScore(100);
+        GameManager.Instance.UpdateScore(CalculateScore());
         Destroy(gameObject);
     }
 
@@ -65,6 +64,20 @@ public class Tablet : MonoBehaviour
         starsOne.AddObject(data.Geschmack);
         starsTwo.AddObject(data.Konsistenz);
         starsThree.AddObject(data.Temperatur);
+        
+        scoreUI.text = "Score: " + CalculateScore();
+    }
+
+    private int CalculateScore()
+    {
+        int score = 0;
+        score += starsOne.CalculateScore();
+        score += starsTwo.CalculateScore();
+        score += starsThree.CalculateScore();
+
+        score *= 10;
+        
+        return score;
     }
     
 }

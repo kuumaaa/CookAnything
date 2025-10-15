@@ -93,10 +93,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Bodenfliese
-  eigenschaft1: 0
-  eigenschaft2: 0
-  eigenschaft3: 0
-  eigenschaft4: 0
+  Geschmack: 1
+  Konsistenz: 1
+  Temperatur: 1
   beschreibung: 'crunchy '
 --- !u!65 &8547137768554419396
 BoxCollider:

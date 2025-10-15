@@ -12,6 +12,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TMP_Text scoreBoardText;
     [SerializeField] private GameObject gameOverScreen;
     
+    [SerializeField] private GameObject tabletInfoUI;
+    
 
     public void DisableObjectInfo()
     {
@@ -33,8 +35,13 @@ public class UIManager : MonoBehaviour
         scoreBoardText.text = "Score: " + score.ToString();
     }
 
-    public void ActivateGameOverScreen()
+    public void SetGameOverScreenActive(bool active)
     {
-        gameOverScreen.SetActive(true);
+        gameOverScreen.SetActive(active);
+    }
+
+    public void SetTabletUIActive(bool active)
+    {
+        tabletInfoUI.SetActive(active);
     }
 }

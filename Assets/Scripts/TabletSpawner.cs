@@ -12,11 +12,11 @@ public class TabletSpawner : MonoBehaviour
     [SerializeField] private GameObject end;
     
 
-    private float tabletLivingTime = 60f;
-    private float timeBetweenSpawns = 15f;
+    private float tabletLivingTime = 120f;
+    private float timeBetweenSpawns = 30f;
     
-    private float minTabletLivingTime = 30f;
-    private float minTimeBetweenSpawns = 5f;
+    private float minTabletLivingTime = 400f;
+    private float minTimeBetweenSpawns = 15f;
     
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -56,6 +56,7 @@ public class TabletSpawner : MonoBehaviour
     {
         GameObject newTablet = Instantiate(tabletPrefab, spawn.transform);
         newTablet.GetComponent<Tablet>().Spawn(spawn.transform.position, end.transform.position,tabletLivingTime, tablets[Random.Range(0, tablets.Length)]);
+        //newTablet.GetComponent<Tablet>().Spawn(spawn.transform.position, end.transform.position,tabletLivingTime, tablets[0]);
     }
     
     

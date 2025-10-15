@@ -120,11 +120,15 @@ public class PlayerController : MonoBehaviour
             if (hit.collider.CompareTag("Object"))
             {
                 GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<Object>().GetObjectData());
+            } else if (hit.collider.CompareTag("Tablet"))
+            {
+                GameManager.Instance.GetUIManager().SetTabletUIActive(true);
             }
         }
         else
         {
             GameManager.Instance.GetUIManager().DisableObjectInfo();
+            GameManager.Instance.GetUIManager().SetTabletUIActive(false);
         }
     }
 

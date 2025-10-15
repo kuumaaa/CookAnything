@@ -46,7 +46,6 @@ public class GameManager : MonoBehaviour
         if (_instance == null)
         {
             _instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -83,6 +82,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("Game Over");
         Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
-        uIManager.GetComponent<UIManager>().ActivateGameOverScreen();
+        uIManager.GetComponent<UIManager>().SetGameOverScreenActive(true);
     }
 }
