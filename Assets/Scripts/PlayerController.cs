@@ -119,27 +119,36 @@ public class PlayerController : MonoBehaviour
         {
             if (!isObjectInHand && hit.collider.CompareTag("Object"))
             {
+                DisableAllInfoUI();
                 GameManager.Instance.GetUIManager().UpdateObjectInfo(hit.collider.gameObject.GetComponent<Object>().GetObjectData());
             } else if (hit.collider.CompareTag("Tablet"))
             {
+                DisableAllInfoUI();
                 GameManager.Instance.GetUIManager().SetTabletUIActive(true);
             } else if (isObjectInHand && hit.collider.CompareTag("Object") &&
                        hit.collider.gameObject.TryGetComponent<CookingPot>(out CookingPot cookingPot))
             {
+                DisableAllInfoUI();
                 GameManager.Instance.GetUIManager().SetCookingUIActive(true);
             } else if (isObjectInHand && hit.collider.CompareTag("Object") &&
                        hit.collider.gameObject.TryGetComponent<Freezer>(out Freezer freezer))
             {
+                DisableAllInfoUI();
                 GameManager.Instance.GetUIManager().SetFreezingUIActive(true);
             }
         }
         else
         {
-            GameManager.Instance.GetUIManager().DisableObjectInfo();
-            GameManager.Instance.GetUIManager().SetTabletUIActive(false);
-            GameManager.Instance.GetUIManager().SetCookingUIActive(false);
-            GameManager.Instance.GetUIManager().SetFreezingUIActive(false);
+            DisableAllInfoUI();
         }
+    }
+
+    private void DisableAllInfoUI()
+    {
+        GameManager.Instance.GetUIManager().DisableObjectInfo();
+        GameManager.Instance.GetUIManager().SetTabletUIActive(false);
+        GameManager.Instance.GetUIManager().SetCookingUIActive(false);
+        GameManager.Instance.GetUIManager().SetFreezingUIActive(false);
     }
 
     private void OnThrowPerformed(InputAction.CallbackContext value)
