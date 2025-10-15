@@ -85,9 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: "M\xFClleimer"
-  Geschmack: 0
+  Geschmack: 3
   Konsistenz: 0
-  Temperatur: 0
+  Temperatur: -1
   beschreibung: Leer
 --- !u!65 &3035034734501239957
 BoxCollider:

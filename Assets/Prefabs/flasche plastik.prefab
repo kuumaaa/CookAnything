@@ -89,10 +89,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Plastikflasche
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Leer
+  Geschmack: 2
+  Konsistenz: 1
+  Temperatur: 1
+  beschreibung: Eine Plastikflasche, voll und ganz uninteressant
 --- !u!65 &1245640402872276700
 BoxCollider:
   m_ObjectHideFlags: 0

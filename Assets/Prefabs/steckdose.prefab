@@ -85,10 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Steckdose
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Kaputt
+  Geschmack: 1
+  Konsistenz: 2
+  Temperatur: 3
+  beschreibung: Man schmeckt noch den Strom
 --- !u!65 &1223177356153649446
 BoxCollider:
   m_ObjectHideFlags: 0

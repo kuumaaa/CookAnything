@@ -85,10 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Radio
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Laut
+  Geschmack: 2
+  Konsistenz: 2
+  Temperatur: 1
+  beschreibung: Spielt leider nur Mark Forster
 --- !u!65 &4950468378068145729
 BoxCollider:
   m_ObjectHideFlags: 0

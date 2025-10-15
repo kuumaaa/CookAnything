@@ -85,9 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: "K\xFCchenschrank"
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
+  Geschmack: -2
+  Konsistenz: 1
+  Temperatur: -1
   beschreibung: Schwer
 --- !u!65 &7547693457007756543
 BoxCollider:

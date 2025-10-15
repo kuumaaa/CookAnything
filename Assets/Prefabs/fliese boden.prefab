@@ -100,7 +100,7 @@ MonoBehaviour:
   Geschmack: 1
   Konsistenz: 1
   Temperatur: 1
-  beschreibung: 'crunchy '
+  beschreibung: Eine Fliese aber horizontal
 --- !u!65 &8547137768554419396
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: "L\xF6ffel"
   Geschmack: 0
-  Konsistenz: 0
+  Konsistenz: 1
   Temperatur: 0
   beschreibung: "L\xF6ffelig"
 --- !u!65 &982695108902359713

@@ -86,7 +86,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Tisch
   Geschmack: 0
-  Konsistenz: 0
+  Konsistenz: 3
   Temperatur: 0
   beschreibung: Dreckig
 --- !u!65 &2771770485410636782

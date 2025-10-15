@@ -85,10 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Stuhl
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Noch warm
+  Geschmack: 1
+  Konsistenz: 1
+  Temperatur: 1
+  beschreibung: Noch warm :)
 --- !u!65 &2737318992976707135
 BoxCollider:
   m_ObjectHideFlags: 0

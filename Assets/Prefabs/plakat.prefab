@@ -85,10 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Plakat
-  Geschmack: 0
-  Konsistenz: 0
+  Geschmack: 1
+  Konsistenz: -2
   Temperatur: 0
-  beschreibung: Labbrig
+  beschreibung: E zum aufheben, Q zum werfen
 --- !u!65 &848435878257094804
 BoxCollider:
   m_ObjectHideFlags: 0

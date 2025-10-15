@@ -85,9 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Kleiner Teller
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
+  Geschmack: -1
+  Konsistenz: 2
+  Temperatur: -1
   beschreibung: Bissl crunchy
 --- !u!65 &5709551546518475543
 BoxCollider:

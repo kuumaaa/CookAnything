@@ -86,9 +86,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: "Sch\xFCssel"
   Geschmack: 0
-  Konsistenz: 0
+  Konsistenz: 2
   Temperatur: 0
-  beschreibung: Crunchy
+  beschreibung: "Eine Leinwand f\xFCr Kochk\xFCnstler"
 --- !u!65 &573363487480295513
 BoxCollider:
   m_ObjectHideFlags: 0

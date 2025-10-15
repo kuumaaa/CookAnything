@@ -93,10 +93,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: "Gl\xFChbirne"
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Kaputt
+  Geschmack: 3
+  Konsistenz: 2
+  Temperatur: 3
+  beschreibung: Nicht verwandt mit der allgemeinen Birne
 --- !u!65 &6673892216782542010
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -89,9 +89,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Schubladenschrank
-  Geschmack: 0
+  Geschmack: 1
   Konsistenz: 0
-  Temperatur: 0
+  Temperatur: 1
   beschreibung: Schwer
 --- !u!65 &7529524787486298192
 BoxCollider:

@@ -85,10 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Glasflasche
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Leer
+  Geschmack: 1
+  Konsistenz: 3
+  Temperatur: -1
+  beschreibung: Paulaner Spezi, mhhh lecker
 --- !u!65 &148250370201690920
 BoxCollider:
   m_ObjectHideFlags: 0

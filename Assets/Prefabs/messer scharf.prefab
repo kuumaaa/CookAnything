@@ -85,9 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: "K\xFCchenmesser"
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
+  Geschmack: 1
+  Konsistenz: 2
+  Temperatur: -1
   beschreibung: Sehr scharf
 --- !u!65 &3913368242344266124
 BoxCollider:

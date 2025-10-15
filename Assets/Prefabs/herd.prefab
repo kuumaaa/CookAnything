@@ -107,6 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Herd
   Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: "Hei\xDF"
+  Konsistenz: 2
+  Temperatur: 3
+  beschreibung: "Hei\xDF und viereckig"

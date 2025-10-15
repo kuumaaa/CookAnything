@@ -86,9 +86,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Tasse
   Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Crunchy
+  Konsistenz: 2
+  Temperatur: 1
+  beschreibung: Kommt mit eingebauten Kaffeeresten
 --- !u!65 &2351923921891731409
 BoxCollider:
   m_ObjectHideFlags: 0

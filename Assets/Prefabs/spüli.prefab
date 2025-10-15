@@ -9,20 +9,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 4.200161
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6.627016
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 15.51417
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.4857541
+      value: -6.0407314
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,27 +18,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10.161402
+      value: -4.827689
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 0.000000030908616
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.000000030908623
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
-      propertyPath: m_LocalRotation.z
       value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -58,7 +46,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: c2803eb3501966e4bad7a54ee478b863, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
@@ -101,10 +89,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: "Sp\xFCli"
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Nass
+  Geschmack: 3
+  Konsistenz: -2
+  Temperatur: -1
+  beschreibung: "Halbvolles \"Sp\xFClmittel\""
 --- !u!65 &2482170470313374912
 BoxCollider:
   m_ObjectHideFlags: 0

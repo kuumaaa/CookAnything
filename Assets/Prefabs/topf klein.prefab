@@ -111,6 +111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Kochtopf
   Geschmack: 0
-  Konsistenz: 0
+  Konsistenz: 3
   Temperatur: 0
   beschreibung: Biegsam

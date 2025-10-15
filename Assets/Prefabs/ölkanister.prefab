@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: "\xD6lkanister"
-  Geschmack: 0
-  Konsistenz: 0
+  Geschmack: 3
+  Konsistenz: -2
   Temperatur: 0
   beschreibung: Nass

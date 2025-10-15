@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Buch
-  Geschmack: 0
-  Konsistenz: 0
+  Geschmack: -2
+  Konsistenz: -1
   Temperatur: 0
-  beschreibung: Mhh, Buchstaben!
+  beschreibung: "Eine trockene Reclam Lekt\xFCre"

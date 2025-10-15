@@ -85,9 +85,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Papierkorb
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
+  Geschmack: 1
+  Konsistenz: 1
+  Temperatur: -2
   beschreibung: Leer
 --- !u!65 &9193359639373771559
 BoxCollider:

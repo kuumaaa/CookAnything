@@ -85,10 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Pistole
-  Geschmack: 0
-  Konsistenz: 0
+  Geschmack: 3
+  Konsistenz: 2
   Temperatur: 0
-  beschreibung: Geladen
+  beschreibung: Geladen und Einsatzbereit
 --- !u!65 &3742167111842866222
 BoxCollider:
   m_ObjectHideFlags: 0

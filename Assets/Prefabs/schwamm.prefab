@@ -85,10 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Schwamm
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Weich
+  Geschmack: 1
+  Konsistenz: -3
+  Temperatur: -1
+  beschreibung: Spongebobs Cousin
 --- !u!65 &5950043318610364607
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -85,10 +85,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Konservendose
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Scharf
+  Geschmack: -2
+  Konsistenz: 1
+  Temperatur: -1
+  beschreibung: "F\xFCr die Apokalypse ganz n\xFCtzlich"
 --- !u!65 &6515792062792414281
 BoxCollider:
   m_ObjectHideFlags: 0

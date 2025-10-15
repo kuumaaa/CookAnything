@@ -89,10 +89,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Putzmittel
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
-  beschreibung: Nass
+  Geschmack: 3
+  Konsistenz: -3
+  Temperatur: -1
+  beschreibung: Mr. Sauber 500ml
 --- !u!65 &976813341656029848
 BoxCollider:
   m_ObjectHideFlags: 0

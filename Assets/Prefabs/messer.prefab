@@ -85,8 +85,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Messer
-  Geschmack: 0
-  Konsistenz: 0
+  Geschmack: 3
+  Konsistenz: 1
   Temperatur: 0
   beschreibung: Scharf
 --- !u!65 &8118055988781958922

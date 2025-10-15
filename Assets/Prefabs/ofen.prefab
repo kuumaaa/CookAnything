@@ -89,9 +89,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Object
   name: Ofen
-  Geschmack: 0
-  Konsistenz: 0
-  Temperatur: 0
+  Geschmack: -2
+  Konsistenz: 1
+  Temperatur: 1
   beschreibung: Warm
 --- !u!65 &6263776208613416126
 BoxCollider:
