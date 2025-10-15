@@ -39222,7 +39222,6 @@ MonoBehaviour:
   hand: {fileID: 804193365}
   rigidbody: {fileID: 1278701365}
   cameraObject: {fileID: 330585543}
-  jumpForce: 3
 --- !u!143 &1278701360
 CharacterController:
   m_ObjectHideFlags: 0
@@ -62288,8 +62287,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 60
+  MinDistance: 2.0621214
+  MaxDistance: 13.583118
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
