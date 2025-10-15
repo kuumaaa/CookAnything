@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.2
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.1676532
+      value: 1.3391228
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.011
+      value: 0.0196
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.310874
+      value: 3.5444372
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       propertyPath: m_LocalRotation.w
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       propertyPath: m_Name
-      value: kakerlake
+      value: kakerlake_mit_sscript
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       propertyPath: m_TagString
@@ -79,6 +79,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 597354883474325499}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7578924239548082791}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6594208674520167436}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1711402156152180988}
   m_SourcePrefab: {fileID: 100100000, guid: 85824d1353bfeb842b7244fea19f96dc, type: 3}
 --- !u!1 &7290945567422158647 stripped
 GameObject:
@@ -99,3 +108,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnimalMovement
   speed: 1.5
   changeDirInterval: 50
+--- !u!65 &7578924239548082791
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290945567422158647}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.03585867, y: 0.057738617, z: 0.0058860974}
+  m_Center: {x: -0.005501112, y: 0.0020487458, z: 0.005302676}
+--- !u!114 &6594208674520167436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290945567422158647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bfdebe4c75b86f41803b3e480a839a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Object
+  name: Kakerlake
+  Geschmack: 1
+  Konsistenz: -2
+  Temperatur: 1
+  beschreibung: Knusprig
+--- !u!114 &1711402156152180988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7290945567422158647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed2e371b62efb8741bed57e86285c01b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
