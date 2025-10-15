@@ -34,4 +34,8 @@ public class AnimalMovement : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    
+    
+    
+    
 }

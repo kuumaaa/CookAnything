@@ -133,7 +133,7 @@ public class StarsUI : MonoBehaviour
 
         if (Math.Sign((int)expectedValue) == Math.Sign((int)actualValue))
         {
-            score += 2 * Math.Min((int)expectedValue, (int)actualValue) - Math.Abs((int)expectedValue - (int)actualValue);
+            score += 5 * Math.Min((int)expectedValue, (int)actualValue) - Math.Abs((int)expectedValue - (int)actualValue);
         }
         else
         {
